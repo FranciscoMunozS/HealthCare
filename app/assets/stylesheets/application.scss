@@ -15,4 +15,69 @@
  */
  @import "bootstrap-sprockets";
  @import "bootstrap";
-  
+
+ @import url('https://fonts.googleapis.com/css?family=Varela+Round');
+
+ @import "font-awesome-sprockets";
+ @import "font-awesome";
+
+ .navbar-nav > li > a, .navbar-brand {
+  height: 75px;
+}
+.navbar {min-height:28px !important;}
+
+.wrapper {
+  width: 60%;
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+body {
+  background: #EDEFF0;
+  font-family: 'Varela Round', sans-serif;
+  h1 {
+    font-weight: 100;
+    font-size: 3em;
+    color: #B2BAC2;
+    margin-top: 0;
+    text-align: center;
+  }
+}
+
+#healths {
+	background: white;
+	padding: 2em 5%;
+	border-radius: .5em;
+	.health {
+		margin: 1em 0;
+		padding: 1em 0;
+		border-bottom: 1px solid #D1d1d1;
+		.title {
+			margin: 0;
+			a {
+				color: #397CAC;
+				text-decoration: none;
+				font-weight: 100;
+				font-size: 1.75rem;
+			}
+		}
+	}
+}
+
+#health_content {
+	background: white;
+	padding: 2em 5%;
+	border-radius: .5em;
+	h1 {
+		font-weight: 100;
+		font-size: 2em;
+		color: #397CAC;
+		margin-top: 0;
+	}
+	p {
+		color: #B2BAC2;
+		font-size: 1.5rem;
+		font-weight: 100;
+		line-height: 1.5;
+	}
+}
