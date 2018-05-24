@@ -1,6 +1,5 @@
-<h1>Editing Health</h1>
-
-<%= render 'form', health: @health %>
-
-<%= link_to 'Show', @health %> |
-<%= link_to 'Back', healths_path %>
+<div id="form_health">
+  <h1>Editar <%= @health.title %></h1>
+  <hr>
+  <%= render 'form', health: @health %>
+</div>

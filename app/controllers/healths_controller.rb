@@ -1,5 +1,6 @@
 class HealthsController < ApplicationController
   before_action :set_health, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, except: [ :index, :show ]
 
   # GET /healths
   # GET /healths.json
@@ -25,38 +26,32 @@ class HealthsController < ApplicationController
   # POST /healths.json
   def create
     @health = Health.new(health_params)
-
-    respond_to do |format|
-      if @health.save
-        format.html { redirect_to @health, notice: 'Health was successfully created.' }
-        format.json { render :show, status: :created, location: @health }
-      else
-        format.html { render :new }
-        format.json { render json: @health.errors, status: :unprocessable_entity }
-      end
+    if @health.save
+      flash[:success] = 'Plan de salud creado correctamente.'
+      redirect_to @health
+    else
+      render :new
     end
   end
 
   # PATCH/PUT /healths/1
   # PATCH/PUT /healths/1.json
   def update
-    respond_to do |format|
-      if @health.update(health_params)
-        format.html { redirect_to @health, notice: 'Health was successfully updated.' }
-        format.json { render :show, status: :ok, location: @health }
-      else
-        format.html { render :edit }
-        format.json { render json: @health.errors, status: :unprocessable_entity }
-      end
+    if @health.update(health_params)
+      flash[:success] = 'Plan de salud actualizado correctamente.'
+      redirect_to @health
+    else
+      render :edit
     end
   end
+
 
   # DELETE /healths/1
   # DELETE /healths/1.json
   def destroy
     @health.destroy
     respond_to do |format|
-      format.html { redirect_to healths_url, notice: 'Health was successfully destroyed.' }
+      format.html { redirect_to healths_url, notice: 'Plan de salud eliminado correctamente' }
       format.json { head :no_content }
     end
   end

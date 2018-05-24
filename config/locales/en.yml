@@ -30,8 +30,3 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  helpers:
-    submit:
-      health:
-        create: "Agregar nuevo plan de salud"
-        update: "Actualizar plan de salud"

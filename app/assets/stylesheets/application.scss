@@ -22,10 +22,45 @@
  @import "font-awesome-sprockets";
  @import "font-awesome";
 
+ .alert-error {
+    background-color: #f2dede;
+    border-color: #eed3d7;
+    color: #b94a48;
+    text-align: left;
+ }
+
+.alert-alert {
+    background-color: #f2dede;
+    border-color: #eed3d7;
+    color: #b94a48;
+    text-align: left;
+ }
+
+.alert-success {
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+    color: #468847;
+    text-align: left;
+ }
+
+.alert-notice {
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+    color: #468847;
+    text-align: left;
+ }
+
  .navbar-nav > li > a, .navbar-brand {
   height: 75px;
 }
-.navbar {min-height:28px !important;}
+.navbar {min-height:75px !important;}
+
+.navbar-nav {
+  li {
+    padding-top: 30px;
+    font-size: 1.3em;
+  }
+}
 
 .wrapper {
   width: 60%;
@@ -37,6 +72,32 @@ body {
   background: #EDEFF0;
   font-family: 'Varela Round', sans-serif;
   h1 {
+    font-weight: 100;
+    font-size: 3em;
+    color: #B2BAC2;
+    margin-top: 0;
+    text-align: center;
+  }
+}
+
+#form_health {
+  background: white;
+  padding: 2em 5%;
+  border-radius: .5em;
+  h2 {
+    font-weight: 100;
+    font-size: 3em;
+    color: #B2BAC2;
+    margin-top: 0;
+    text-align: center;
+  }
+}
+
+#login_health {
+  background: white;
+	padding: 2em 5%;
+	border-radius: .5em;
+  h2 {
     font-weight: 100;
     font-size: 3em;
     color: #B2BAC2;
