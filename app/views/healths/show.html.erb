@@ -2,4 +2,7 @@
   <h1 class="text-center"><%= @health.title %></h1>
   <hr>
   <p class="text-justify"><%= @health.body.html_safe %></p>
+  <hr>
+  <%= link_to 'Editar plan de salud', edit_health_path(@health), class: 'btn btn-warning' %>
+  <%= link_to 'Eliminar plan de salud', @health, method: :delete, data: { confirm: 'Estas seguro?' }, class: 'btn btn-danger' %>
 </div>
