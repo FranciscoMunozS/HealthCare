@@ -12,7 +12,7 @@
   <% end %>
     <%= f.input :title, label: 'Nombre plan de salud' %>
 
-    <%= f.input :body, input_html: { rows: 15 }, label: 'Descripción del plan de salud' %>
+    <%= f.input :body, label: 'Contenido plan de salud', as: :ckeditor, input_html: { ckeditor: { toolbar: 'mini' } } %>
 
   <div class="actions">
     <%= f.submit class: 'btn btn-primary' %>

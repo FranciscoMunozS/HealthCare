@@ -1,5 +1,5 @@
 <div id="health_content">
   <h1 class="text-center"><%= @health.title %></h1>
   <hr>
-  <p class="text-justify"><%= @health.body %></p>
+  <p class="text-justify"><%= @health.body.html_safe %></p>
 </div>
