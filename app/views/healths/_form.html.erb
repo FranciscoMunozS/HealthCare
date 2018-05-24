@@ -1,0 +1,20 @@
+<%= simple_form_for @health, html: { multipart: true } do |f| %>
+  <% if health.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(health.errors.count, "error") %> prohibited this health from being saved:</h2>
+
+      <ul>
+      <% health.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+    <%= f.input :title, label: 'Nombre plan de salud' %>
+
+    <%= f.input :body, label: 'Descripción del plan de salud' %>
+
+  <div class="actions">
+    <%= f.submit class: 'btn btn-primary' %>
+  </div>
+<% end %>
