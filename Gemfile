@@ -18,6 +18,8 @@ gem 'bootsnap', '>= 1.1.0', require: false
 gem 'devise', '~> 4.4', '>= 4.4.3'
 gem 'normalize-rails', '~> 4.1', '>= 4.1.1'
 gem 'ckeditor', '~> 4.2', '>= 4.2.4'
+gem 'carrierwave', '~> 1.2', '>= 1.2.2'
+gem 'mini_magick', '~> 4.8'
 
 group :development, :test do
   gem 'sqlite3'
