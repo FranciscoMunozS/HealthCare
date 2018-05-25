@@ -5,7 +5,7 @@ class HealthsController < ApplicationController
   # GET /healths
   # GET /healths.json
   def index
-    @healths = Health.all
+    @healths = Health.all.order("created_at DESC")
   end
 
   # GET /healths/1
